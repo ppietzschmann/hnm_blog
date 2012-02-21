@@ -2,7 +2,6 @@
 /***************************************************************
 *  Copyright notice
 *
-*  (c) 2011 Patrick Lobacher <patrick.lobacher@typovision.de>
 *  All rights reserved
 *
 *  This script is part of the TYPO3 project. The TYPO3 project is
@@ -23,47 +22,19 @@
 ***************************************************************/
 
 /**
- * The sample Controller called StartController
- *
  * @version $Id:$
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License, version 2
  */
-class Tx_Efempty_Controller_StartController extends Tx_Extbase_MVC_Controller_ActionController {
-
-	/**
-	 * Initializes the current action
-	 *
-	 * @return void
-	 */
-	public function initializeAction() {
-
-	}
+class Tx_HnmBlog_Controller_BlogController extends Tx_Extbase_MVC_Controller_ActionController {
 
 	/**
 	 * Index action for this controller.
 	 *
-	 * @return string The rendered view
+	 * @return void
 	 */
 	public function indexAction() {
-		
-		// plain assign
-		$this->view->assign('helloworld1', 'Hello World 1!');
-		
-		// normal array assign
-		$array = array('Hello','World','2!');
-		$this->view->assign('helloworld2', $array);
-		
-		// assoziative array assign
-		$array = array('first' => 'Hello', 'middle' => 'World', 'last' => '3!');
-		$this->view->assign('helloworld3', $array);
-		
-		// object assign
-		$start = new Tx_Efempty_Domain_Model_Start;
-       	$start->setTitle("Hello World 4!");
-      	$this->view->assign('helloworld4', $start);
-
+		$this->view->assign('foo', 'bar');
 	}
-	
-}
 
+}
 ?>
