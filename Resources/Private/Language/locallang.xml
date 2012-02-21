@@ -2,16 +2,11 @@
 <T3locallang>
 	<meta type="array">
 		<type>module</type>
-		<description>Sprachlabels für die Efempty Extension</description>
+		<description>Sprachlabels</description>
 	</meta>
 	<data type="array">
 		<languageKey index="default" type="array">
-			<label index="das.ist.der.key">This is the english output</label>
-			<label index="test">TESTAusgabeEN</label>
-		</languageKey>
-		<languageKey index="de" type="array">
-			<label index="das.ist.der.key">Das ist die deutsche Ausgabe</label>
-			<label index="test">TESTAusgabeDE</label>
+			<label index="plugin.display.name">HNM Blog Display</label>
 		</languageKey>
 	</data>
 </T3locallang>
