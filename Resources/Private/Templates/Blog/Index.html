@@ -1,4 +1,11 @@
-<h2>Unsere Extension</h2>
-<f:count>{blogs}</f:count>
-
-<h2>{blogs.1.title}</h2>
+<html>
+	<head>
+	</head>
+<body>
+	<h2>Unsere Extension</h2>
+	<f:for each="{blogs}" as="blog">
+		<h2>{blog.title}</h2>
+		<f:link.action action="show" arguments="{blog: blog}">Show Action</f:link.action>
+	</f:for>
+</body>
+</html>

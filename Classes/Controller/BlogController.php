@@ -45,7 +45,15 @@ class Tx_HnmBlog_Controller_BlogController extends Tx_Extbase_MVC_Controller_Act
 	 * @return void
 	 */
 	public function indexAction() {
-		$this->view->assign('blogs', $this->blogRepository->findByTitleAndPost('ite', 1));
+		$this->view->assign('blogs', $this->blogRepository->findAll());
+	}
+
+	/**
+	 * @param Tx_HnmBlog_Domain_Model_Blog $blog
+	 * @return void
+	 */
+	public function showAction(Tx_HnmBlog_Domain_Model_Blog $blog) {
+		$this->view->assign('blog', $blog);
 	}
 
 }

@@ -26,6 +26,9 @@
  * @license 	http://opensource.org/licenses/gpl-license.php GNU Public License, version 2
  */
 class Tx_HnmBlog_Domain_Model_Blog extends Tx_Extbase_DomainObject_AbstractEntity {
+	
+	const STATUS_NEW = '1';
+	const STATUS_OLD = 'old';
 
 	/**
 	 * @var string
