@@ -2,7 +2,6 @@
 /***************************************************************
 *  Copyright notice
 *
-*  (c) 2011 Patrick Lobacher <patrick.lobacher@typovision.de> 
 *  All rights reserved
 *
 *  This script is part of the TYPO3 project. The TYPO3 project is
@@ -23,53 +22,51 @@
 ***************************************************************/
 
 /**
- * Just a model called Start with one attribute 
- *
- * @version 	$Id:$
- * @author		Patrick Lobacher <patrick.lobacher@typovision.de>
  * @copyright 	Copyright belongs to the respective authors
  * @license 	http://opensource.org/licenses/gpl-license.php GNU Public License, version 2
- * @scope 		prototype
- * @entity
  */
-class Tx_Efempty_Domain_Model_Start extends Tx_Extbase_DomainObject_AbstractEntity {
+class Tx_HnmBlog_Domain_Model_Comment extends Tx_Extbase_DomainObject_AbstractEntity {
 
 	/**
-	 * Some title.
-	 *
 	 * @var string
-	 * @identity
 	 */
-	protected $title = '';
-	
-    /**
-	 * An empty constructor - fill it as you like
-	 *
-	 */
-	public function __construct() {
-		
-	}
-	
-	
-	/**
-	 * Sets the title
-	 * 
-	 * @param string $title
-	 * return void
-	 */
-	public function setTitle($title) {
-		$this->title = $title;
-	}
-	
-	/**
-	 * Gets the title
-	 * 
-	 * @return string The title of the album
-	 */
-	public function getTitle() {
-		return $this->title;
-	}
-	
-}
+	protected $text;
 
+	/**
+	 * @var Tx_HnmBlog_Domain_Model_Post
+	 */
+	protected $post;
+
+	/**
+	 * @param string $text
+	 * @return Tx_HnmBlog_Domain_Model_Comment this
+	 */
+	public function setText($text) {
+		$this->text = $text;
+		return $this;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getText() {
+		return $this->text;
+	}
+
+	/**
+	 * @param Tx_HnmBlog_Domain_Model_Post $post
+	 * @return Tx_HnmBlog_Domain_Model_Comment this
+	 */
+	public function setPost(Tx_HnmBlog_Domain_Model_Post $post) {
+		$this->post = $post;
+		return $this;
+	}
+
+	/**
+	 * @return Tx_HnmBlog_Domain_Model_Post
+	 */
+	public function getPost() {
+		return $this->post;
+	}
+}
 ?>

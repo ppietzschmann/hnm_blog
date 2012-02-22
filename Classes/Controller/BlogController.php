@@ -33,7 +33,7 @@ class Tx_HnmBlog_Controller_BlogController extends Tx_Extbase_MVC_Controller_Act
 	 * @return void
 	 */
 	public function indexAction() {
-		$this->view->assign('foo', 'bar');
+		$this->view->assign('blogs', $blogs);
 	}
 
 }
