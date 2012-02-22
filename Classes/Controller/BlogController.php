@@ -28,12 +28,24 @@
 class Tx_HnmBlog_Controller_BlogController extends Tx_Extbase_MVC_Controller_ActionController {
 
 	/**
+	 * @var Tx_HnmBlog_Domain_Repository_BlogRepository
+	 */
+	protected $blogRepository;
+
+	/**
+	 * @param Tx_HnmBlog_Domain_Repository_BlogRepository $blogRepository
+	 */
+	public function injectRepository(Tx_HnmBlog_Domain_Repository_BlogRepository $blogRepository) {
+		$this->blogRepository = $blogRepository;
+	}
+
+	/**
 	 * Index action for this controller.
 	 *
 	 * @return void
 	 */
 	public function indexAction() {
-		$this->view->assign('blogs', $blogs);
+		$this->view->assign('blogs', $this->blogRepository->findAll());
 	}
 
 }
