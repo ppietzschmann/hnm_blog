@@ -1,0 +1,6 @@
+plugin.tx_hnmblog {
+	persistence {
+		 # cat=plugin.storages//a; type=int+; label=HnM Blog storage PID
+		storagePid =
+	}
+}

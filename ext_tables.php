@@ -2,6 +2,8 @@
 
 if (!defined ('TYPO3_MODE')) die ('Access denied.');
 
+t3lib_extMgm::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'HNM Blog Setup');
+
 Tx_Extbase_Utility_Extension::registerPlugin($_EXTKEY,'Display','LLL:EXT:hnm_blog/Resources/Private/Language/locallang.xml:plugin.display.name');
 
 t3lib_extMgm::allowTableOnStandardPages('tx_hnmblog_domain_model_blog');

@@ -27,5 +27,27 @@
  * A repository for blogs
  */
 class Tx_HnmBlog_Domain_Repository_BlogRepository extends Tx_Extbase_Persistence_Repository {
+
+	/**
+	 * @param string $title
+	 * @param integer $post
+	 * @return Tx_Extbase_Persistence_QueryResultInterface
+	 */
+	public function findByTitleAndPost($title, $post) {
+		$query = $this->createQuery();
+
+		$query->matching(
+			$query->logicalAnd(
+				$query->like('title', '%' . $title . '%'),
+				$query->contains('posts', $post)
+			)
+		)
+			->setLimit(1)
+			->setOrderings(array(
+				'title' => Tx_Extbase_Persistence_QueryInterface::ORDER_ASCENDING
+			));
+
+		return $query->execute();
+	}
 }
 ?>

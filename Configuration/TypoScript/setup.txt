@@ -1,0 +1,6 @@
+ # Plugin configuration
+plugin.tx_hnmblog {
+	persistence {
+		storagePid = {$plugin.tx_hnmblog.persistence.storagePid}
+	}
+}
