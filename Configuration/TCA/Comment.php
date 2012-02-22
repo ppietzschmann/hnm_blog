@@ -29,7 +29,10 @@ $TCA['tx_hnmblog_domain_model_comment'] = array(
 			'exclude' => 1,
 			'label' => $commentLabels . 'post',
 			'config' => array(
-				'type' => 'input',
+				'type' => 'select',
+				'maxitems' => 1,
+				'foreign_table' => 'tx_hnmblog_domain_model_post',
+				'items' => array(array('Bitte wählen', '')),
 			),
 		),
 	),

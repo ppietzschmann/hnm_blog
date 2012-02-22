@@ -15,6 +15,9 @@
 			<label index="domain.model.post">Post</label>
 			<label index="domain.model.post.title">Titel</label>
 			<label index="domain.model.post.text">Inhalt</label>
+			<label index="domain.model.post.comments">Kommentare</label>
+			<label index="domain.model.post.tags">Tags</label>
+			<label index="domain.model.post.blog">Blog</label>
 
 			<label index="domain.model.comment">Kommentar</label>
 			<label index="domain.model.comment.text">Kommentar</label>
@@ -22,6 +25,7 @@
 
 			<label index="domain.model.tag">Tag</label>
 			<label index="domain.model.tag.name">Name</label>
+			<label index="domain.model.tag.posts">Posts</label>
 
 			<label index="plugin.display.name">HNM Blog Display</label>
 

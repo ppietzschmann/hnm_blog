@@ -70,9 +70,40 @@ $TCA['tx_hnmblog_domain_model_post'] = array(
 				'cols' => 35,
 			)
 		),
+		'comments' => array(
+			'exclude' => 0,
+			'label' => $postLabels . 'comments',
+			'config' => array(
+				'type' => 'inline',
+				'maxitems' => 99999,
+				'size' => 15,
+				'foreign_table' => 'tx_hnmblog_domain_model_comment',
+				'foreign_field' => 'post',
+			),
+		),
+		'tags' => array(
+			'exclude' => 0,
+			'label' => $postLabels . 'tags',
+			'config' => array(
+				'type' => 'select',
+				'maxitems' => 99999,
+				'size' => 15,
+				'foreign_table' => 'tx_hnmblog_domain_model_tag',
+				'MM' => 'tx_hnmblog_post_tag_mm',
+			),
+		),
+		'blog' => array(
+			'exclude' => 0,
+			'label' => $postLabels . 'blog',
+			'config' => array(
+				'type' => 'select',
+				'maxitems' => 1,
+				'foreign_table' => 'tx_hnmblog_domain_model_blog'
+			),
+		),
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid, title, bodytext, --div--;' . $locallang . 'tca.sheet.relations'),
+		'1' => array('showitem' => 'sys_language_uid, title, bodytext, --div--;' . $locallang . 'tca.sheet.relations, blog, tags, comments'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => '')

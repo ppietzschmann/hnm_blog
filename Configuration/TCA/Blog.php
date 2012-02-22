@@ -62,18 +62,15 @@ $TCA['tx_hnmblog_domain_model_blog'] = array(
 			)
 		),
 		'posts' => array(
-			'exclude' => 1,
+			'exclude' => 0,
 			'label' => $blogLabels . 'posts',
 			'config' => array(
-				'type' => 'inline',
-				'foreign_table' => 'tx_blogexample_domain_model_post',
-				'foreign_field' => 'blog',
-				'foreign_sortby' => 'sorting',
+				'type' => 'select',
 				'maxitems' => 99999,
-				'appearance' => array(
-					'collapseAll' => 1,
-					'expandSingle' => 1,
-				),
+				'size' => 20,
+				'foreign_table' => 'tx_hnmblog_domain_model_post',
+				'foreign_field' => 'blog',
+				'readOnly' => TRUE,
 			),
 		),
 	),

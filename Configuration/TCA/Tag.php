@@ -26,9 +26,21 @@ $TCA['tx_hnmblog_domain_model_tag'] = array(
 				'max' => 255,
 			)
 		),
+		'posts' => array(
+			'exclude' => 1,
+			'label' => $tagLabels . 'posts',
+			'config' => array(
+				'type' => 'select',
+				'maxitems' => 99999,
+				'size' => 15,
+				'foreign_table' => 'tx_hnmblog_domain_model_post',
+				'MM' => 'tx_hnmblog_post_tag_mm',
+				'MM_opposite_field' => 'tags',
+			),
+		),
 	),
 	'types' => array(
-		'1' => array('showitem' => 'name, --div--;' . $locallang . 'tca.sheet.relations'),
+		'1' => array('showitem' => 'name, --div--;' . $locallang . 'tca.sheet.relations, posts'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => '')
