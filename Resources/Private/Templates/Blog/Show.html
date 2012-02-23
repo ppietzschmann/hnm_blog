@@ -1,1 +1,8 @@
-{blog.title}
+<h2>{blog.title}</h2>
+<ul>
+	<f:for each="{blog.posts}" as="post">
+		<li><f:link.action controller="Post" action="show" arguments="{post: post}">
+			{post.title}
+		</f:link.action></li>
+	</f:for>
+</ul>

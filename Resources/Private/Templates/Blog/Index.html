@@ -3,9 +3,11 @@
 	</head>
 <body>
 	<h2>Unsere Extension</h2>
+	<ul>
 	<f:for each="{blogs}" as="blog">
-		<h2>{blog.title}</h2>
-		<f:link.action action="show" arguments="{blog: blog}">Show Action</f:link.action>
+		<li>{blog.title}<br />
+		<f:link.action action="show" arguments="{blog: blog}">Show Action</f:link.action></li>
 	</f:for>
+	</ul>
 </body>
 </html>

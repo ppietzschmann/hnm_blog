@@ -25,35 +25,15 @@
  * @version $Id:$
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License, version 2
  */
-class Tx_HnmBlog_Controller_BlogController extends Tx_Extbase_MVC_Controller_ActionController {
+class Tx_HnmBlog_Controller_PostController extends Tx_Extbase_MVC_Controller_ActionController {
 
 	/**
-	 * @var Tx_HnmBlog_Domain_Repository_BlogRepository
-	 */
-	protected $blogRepository;
-
-	/**
-	 * @param Tx_HnmBlog_Domain_Repository_BlogRepository $blogRepository
-	 */
-	public function injectRepository(Tx_HnmBlog_Domain_Repository_BlogRepository $blogRepository) {
-		$this->blogRepository = $blogRepository;
-	}
-
-	/**
-	 * Index action for this controller.
-	 *
+	 * @param Tx_HnmBlog_Domain_Model_Post $post
 	 * @return void
 	 */
-	public function indexAction() {
-		$this->view->assign('blogs', $this->blogRepository->findAll());
+	public function showAction(Tx_HnmBlog_Domain_Model_Post $post) {
+		$this->view->assign('post', $post);
 	}
 
-	/**
-	 * @param Tx_HnmBlog_Domain_Model_Blog $blog
-	 * @return void
-	 */
-	public function showAction(Tx_HnmBlog_Domain_Model_Blog $blog) {
-		$this->view->assign('blog', $blog);
-	}
 }
 ?>
