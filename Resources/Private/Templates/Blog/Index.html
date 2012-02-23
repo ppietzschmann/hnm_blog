@@ -1,13 +1,21 @@
+{namespace hnm=Tx_HnmBase_ViewHelpers}
+<f:layout name="Layout" />
+
 <html>
 	<head>
+		<title>Hnm Schulung</title>
 	</head>
 <body>
 	<h2>Unsere Extension</h2>
-	<ul>
-	<f:for each="{blogs}" as="blog">
-		<li>{blog.title}<br />
-		<f:link.action action="show" arguments="{blog: blog}">Show Action</f:link.action></li>
-	</f:for>
-	</ul>
+	
+	<f:section name="main">
+		<ul>
+		<f:for each="{blogs}" as="blog">
+			<li>{blog.title}<br />
+			<f:link.action action="show" arguments="{blog: blog}">Show Action</f:link.action></li>
+		</f:for>
+		</ul>
+	</f:section>
+	
 </body>
 </html>
