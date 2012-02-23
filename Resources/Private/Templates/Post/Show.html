@@ -1,2 +1,8 @@
-<h2>{post.title}({post.author.firstname} {post.author.lastname})</h2>
+<h2>{post.title}
+	(<f:link.email email="{post.author.email}" />)</h2>
 {post.text}
+<ul>
+	<f:for each="{post.comments}" as="comment">
+		<li>{comment.text}</li>
+	</f:for>
+</ul>
