@@ -29,6 +29,7 @@ class Tx_HnmBlog_Domain_Model_Comment extends Tx_Extbase_DomainObject_AbstractEn
 
 	/**
 	 * @var string
+	 * @validate NotEmpty
 	 */
 	protected $text;
 

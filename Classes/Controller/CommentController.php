@@ -28,6 +28,17 @@
 class Tx_HnmBlog_Controller_CommentController extends Tx_Extbase_MVC_Controller_ActionController {
 
 	/**
+	 * @param Tx_HnmBlog_Domain_Model_Post $post
+	 * @param Tx_HnmBlog_Domain_Model_Comment $newComment
+	 * @dontvalidate $newComment
+	 * @return void
+	 */
+	public function newAction(Tx_HnmBlog_Domain_Model_Post $post = NULL, Tx_HnmBlog_Domain_Model_Comment $newComment = NULL) {
+		$this->view->assign('post', $post);
+		$this->view->assign('newComment', $newComment);
+	}
+
+	/**
 	 * @param Tx_HnmBlog_Domain_Model_Comment $newComment
 	 * @return void
 	 */
