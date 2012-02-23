@@ -1,0 +1,5 @@
+<blog>
+	<f:for each="{blogs}" as="blog">
+		<item>{blog.title}</item>
+	</f:for>
+</blog>

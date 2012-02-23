@@ -20,3 +20,24 @@ plugin.tx_hnmblog {
 		numberOfPosts = 5
 	}
 }
+
+ # plaintext rendering
+tx_hnmblog_ajax = PAGE
+tx_hnmblog_ajax {
+	typeNum = 1330004475
+	10 = USER
+	10 {
+		userFunc = tx_extbase_core_bootstrap->run
+		extensionName = HnmBlog
+		pluginName = Ajax
+	}
+	config {
+		admPanel = 0
+		no_cache = 1
+		disableAllHeaderCode = 1
+		additionalHeaders = Content-type:text/plain
+		defaultGetVars {
+			tx_hnmblog_ajax.format = txt
+		}
+	}
+}

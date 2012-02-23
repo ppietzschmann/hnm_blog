@@ -55,5 +55,14 @@ class Tx_HnmBlog_Controller_BlogController extends Tx_Extbase_MVC_Controller_Act
 	public function showAction(Tx_HnmBlog_Domain_Model_Blog $blog) {
 		$this->view->assign('blog', $blog);
 	}
+
+	/**
+	 * @param integer $foo
+	 * @return string
+	 */
+	public function ajaxAction($foo = 0) {
+		var_dump($foo);die();
+		$this->view->assign('blogs', $this->blogRepository->findAll());
+	}
 }
 ?>
