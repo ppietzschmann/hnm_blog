@@ -1,0 +1,29 @@
+config.no_cache = 1
+
+lib.headerColumn < styles.content.getBorder
+lib.leftColumn < styles.content.getLeft
+lib.mainColumn < styles.content.get
+lib.rightColumn < styles.content.getRight
+
+page = PAGE
+page.10 = FLUIDTEMPLATE
+page.10 {
+  file.stdWrap.cObject = CASE
+  file.stdWrap.cObject {
+    # slide the template
+    key.data = levelfield:-1, backend_layout_next_level, slide
+    key.override.field = backend_layout
+    # default template file
+    default = TEXT
+    default.value = fileadmin/templates/Index.html
+    # template file for backend-layout with ID 2
+    1 = TEXT
+    1.value = fileadmin/templates/Dreispaltig.html
+  }
+  partialRootPath = fileadmin/templates/Partials/
+  layoutRootPath = fileadmin/templates/Layouts/  
+}
+
+config.spamProtectEmailAddresses = 2
+config.spamProtectEmailAddresses_atSubst = &lt;at&gt;
+config.spamProtectEmailAddresses_lastDotSubst = &lt;dot&gt;
