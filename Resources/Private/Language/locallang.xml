@@ -18,7 +18,8 @@
 			<label index="domain.model.post.comments">Kommentare</label>
 			<label index="domain.model.post.tags">Tags</label>
 			<label index="domain.model.post.blog">Blog</label>
-
+			<label index="domain.model.post.author">Autor</label>
+			
 			<label index="domain.model.comment">Kommentar</label>
 			<label index="domain.model.comment.text">Kommentar</label>
 			<label index="domain.model.comment.post">Post</label>

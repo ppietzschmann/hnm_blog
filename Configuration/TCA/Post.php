@@ -101,9 +101,18 @@ $TCA['tx_hnmblog_domain_model_post'] = array(
 				'foreign_table' => 'tx_hnmblog_domain_model_blog'
 			),
 		),
+		'author' => array(
+			'exclude' => 0,
+			'label' => $postLabels . 'author',
+			'config' => array(
+				'type' => 'select',
+				'maxitems' => 1,
+				'foreign_table' => 'fe_users',
+			),
+		),
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid, title, bodytext, --div--;' . $locallang . 'tca.sheet.relations, blog, tags, comments'),
+		'1' => array('showitem' => 'sys_language_uid, title, bodytext, --div--;' . $locallang . 'tca.sheet.relations, blog, tags, comments, author'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => '')

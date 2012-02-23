@@ -53,6 +53,11 @@ class Tx_HnmBlog_Domain_Model_Post extends Tx_Extbase_DomainObject_AbstractEntit
 	protected $tags;
 
 	/**
+	 * @var Tx_Extbase_Domain_Model_FrontendUser
+	 */
+	protected $author;
+
+	/**
 	 * @param string $title
 	 * @return Tx_HnmBlog_Domain_Model_Post this
 	 */
@@ -130,6 +135,22 @@ class Tx_HnmBlog_Domain_Model_Post extends Tx_Extbase_DomainObject_AbstractEntit
 	 */
 	public function getTags() {
 		return $this->tags;
+	}
+
+	/**
+	 * @param Tx_Extbase_Domain_Model_FrontendUser $author
+	 * @return Tx_Extbase_Domain_Model_FrontendUser this
+	 */
+	public function setAuthor(Tx_Extbase_Domain_Model_FrontendUser $author) {
+		$this->author = $author;
+		return $this;
+	}
+
+	/**
+	 * @return Tx_Extbase_Domain_Model_FrontendUser
+	 */
+	public function getAuthor() {
+		return $this->author;
 	}
 }
 ?>
