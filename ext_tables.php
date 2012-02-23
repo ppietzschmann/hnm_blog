@@ -16,6 +16,8 @@ $TCA['tx_hnmblog_domain_model_blog'] = array (
 		'dividers2tabs' => TRUE,
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
+			// record type für single table inheritance
+		// 'type' => 'record_type',
 		'languageField' => 'sys_language_uid',
 		'transOrigPointerField' => 'l18n_parent',
 		'transOrigDiffSourceField' => 'l18n_diffsource',

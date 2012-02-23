@@ -6,6 +6,11 @@ plugin.tx_hnmblog {
 			Tx_HnmBlog_Domain_Model_Post.mapping.columns {
 				bodytext.mapOnProperty = text
 			}
+				# mappen von model auf andere tabelle
+#			Tx_HnmBlog_Domain_Model_Author.mapping {
+#				tableName = fe_users
+#				recordType = Tx_HnmBlog_Domain_Model_Author
+#			}
 		}
 	}
 }
