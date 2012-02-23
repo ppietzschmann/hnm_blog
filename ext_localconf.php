@@ -12,10 +12,12 @@ Tx_Extbase_Utility_Extension::configurePlugin(
 	array(					// An array holding the controller-action-combinations that are accessible 
 		'Blog' => 'index,show',
 		'Post' => 'show',	// The first controller and its first action will be the default 
+		'Comment' => 'create',
 		),
 	array(					// An array of non-cachable controller-action-combinations (they must already be enabled)
 		'Blog' => 'index,show',
 		'Post' => 'show',
+		'Comment' => 'create',
 		)
 );
 

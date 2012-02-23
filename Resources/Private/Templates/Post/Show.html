@@ -6,3 +6,9 @@
 		<li>{comment.text}</li>
 	</f:for>
 </ul>
+
+<f:form object="{newComment}" name="newComment" controller="Comment" action="create">
+	<f:form.hidden property="post" value="{post}" />
+	<f:form.textarea property="text" rows="5" cols="20"></f:form.textarea>
+	<f:form.submit value="Absenden" />
+</f:form>
