@@ -2,5 +2,10 @@
 plugin.tx_hnmblog {
 	persistence {
 		storagePid = {$plugin.tx_hnmblog.persistence.storagePid}
+		classes {
+			Tx_HnmBlog_Domain_Model_Post.mapping.columns {
+				bodytext.mapOnProperty = text
+			}
+		}
 	}
 }
