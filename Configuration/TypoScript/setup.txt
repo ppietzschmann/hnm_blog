@@ -16,4 +16,7 @@ plugin.tx_hnmblog {
 #			}
 		}
 	}
+	settings {
+		numberOfPosts = 5
+	}
 }
