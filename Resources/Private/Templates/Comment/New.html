@@ -1,3 +1,18 @@
+<f:form.errors>
+	<ul>
+	<f:for each="{error.errors}" key="propertyName" as="validationErrors">
+		<li>
+			Fehler in Property '{propertyName}'.
+			<ul>
+				<f:for each="{validationErrors.errors}" as="validationError">
+					<li>{validationError.message}</li>
+				</f:for>
+			</ul>
+		</li>
+	</f:for>
+	</ul>
+</f:form.errors>
+
 <f:form object="{newComment}" name="newComment" controller="Comment" action="create">
 	<f:form.hidden property="post" value="{post}" />
 	<f:form.textarea property="text" rows="5" cols="20"></f:form.textarea>
